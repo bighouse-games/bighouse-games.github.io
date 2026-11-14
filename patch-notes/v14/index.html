@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Clicker Village 2 — Patch 0.1.0 (14)</title>
+<link rel="icon" href="../../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#11161d;
+    --bg-deep:#0b0e13;
+    --card:#1a212b;
+    --card-line:#2a3542;
+    --ink:#e9edf2;
+    --ink-soft:#9aa7b5;
+    --orange:#d96b2c;
+    --orange-deep:#7a2f1a;
+    --blue:#2e4a63;
+    --blue-deep:#1c3144;
+    --good:#58c47a;
+    --bad:#e2583f;
+    --gold:#e3b23c;
+    --max:900px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 500px at 50% -120px, rgba(217,107,44,.12), transparent 60%),
+      var(--bg-deep);
+    color:var(--ink);
+    font-family:"Nunito", system-ui, sans-serif;
+    font-size:16px;
+    line-height:1.55;
+    padding-bottom:80px;
+  }
+  h1,h2,h3,.cat-title,.sub-title{font-family:"Fredoka", system-ui, sans-serif;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 18px;}
+
+  .top{
+    text-align:center;
+    padding:54px 18px 28px;
+    border-bottom:1px solid var(--card-line);
+    margin-bottom:34px;
+  }
+  .top .eyebrow{
+    display:inline-block;
+    letter-spacing:.14em;
+    font-size:12px;
+    font-weight:800;
+    color:var(--orange);
+    text-transform:uppercase;
+    margin-bottom:10px;
+  }
+  .top h1{
+    margin:0 0 8px;
+    font-size:clamp(26px, 5vw, 40px);
+    font-weight:700;
+    letter-spacing:.02em;
+  }
+  .top p{margin:0; color:var(--ink-soft); font-size:14px;}
+
+  .category{margin:0 0 46px;}
+  .cat-title{
+    display:flex; align-items:center; gap:10px;
+    background:linear-gradient(100deg, var(--orange-deep) 0%, var(--orange) 55%, var(--orange-deep) 100%);
+    color:#fff2e4;
+    font-weight:700;
+    font-size:15px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    padding:12px 18px;
+    border-radius:6px;
+    box-shadow:0 6px 18px rgba(217,107,44,.18);
+  }
+  .sub-title{
+    background:linear-gradient(100deg, var(--blue-deep), var(--blue));
+    color:#dce9f4;
+    font-weight:600;
+    font-size:12.5px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    padding:8px 16px;
+    border-radius:4px;
+    margin:22px 0 14px;
+  }
+
+  .entry{
+    display:flex;
+    gap:14px;
+    padding:16px 4px 20px;
+    border-bottom:1px solid var(--card-line);
+  }
+  .entry:last-child{border-bottom:none;}
+  .icon{
+    flex:0 0 auto;
+    width:46px; height:46px;
+    border-radius:10px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:22px;
+    background:var(--card);
+    border:1px solid var(--card-line);
+  }
+  .entry-body{flex:1; min-width:0;}
+  .entry-name{
+    font-weight:700;
+    font-size:16.5px;
+    color:#fff;
+    margin-bottom:6px;
+  }
+  .ability{
+    font-size:13px;
+    font-weight:700;
+    color:var(--gold);
+    text-decoration:underline;
+    text-decoration-color:rgba(227,178,60,.35);
+    margin:10px 0 4px;
+  }
+  ul.changes{margin:0; padding-left:18px;}
+  ul.changes li{
+    color:var(--ink-soft);
+    font-size:14.5px;
+    margin:4px 0;
+  }
+  .old{color:var(--bad); text-decoration:line-through; opacity:.85;}
+  .new{color:var(--good); font-weight:700;}
+  .neutral{color:var(--gold); font-weight:700;}
+  .arrow{color:var(--ink-soft); margin:0 2px;}
+
+  footer.note{
+    max-width:var(--max); margin:50px auto 0; padding:18px;
+    text-align:center; font-size:12.5px; color:var(--ink-soft);
+  }
+  footer.note a{color:var(--orange);}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <span class="eyebrow">Clicker Village 2 · Notas de atualização</span>
+  <h1>Patch 0.1.0 — build 14</h1>
+  <p>Ninguém pediu, mas aqui estão as mudanças desde a versão 13. 👀</p>
+</div>
+
+<div class="wrap">
+
+  <section class="category">
+    <div class="cat-title">⚖️ Atualizações de Oaths</div>
+
+    <div class="sub-title">Tool Shop</div>
+    <div class="entry">
+      <div class="icon">🎯</div>
+      <div class="entry-body">
+        <div class="entry-name">Focus</div>
+        <div class="ability">Bônus por clique em sequência</div>
+        <ul class="changes">
+          <li>Bônus por clique na mesma sequência: <span class="old">+3%</span><span class="arrow">→</span><span class="new">+5%</span> por clique</li>
+        </ul>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="icon">🔁</div>
+      <div class="entry-body">
+        <div class="entry-name">Rotation</div>
+        <ul class="changes">
+          <li>Texto da descrição simplificado <span class="neutral">(sem mudança de mecânica)</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="icon">🥁</div>
+      <div class="entry-body">
+        <div class="entry-name">Rhythm</div>
+        <ul class="changes">
+          <li>O bônus máximo do combo agora é mostrado em porcentagem: <span class="old">x2,0</span><span class="arrow">→</span><span class="new">+100%</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sub-title">Temple</div>
+    <div class="entry">
+      <div class="icon">🌀</div>
+      <div class="entry-body">
+        <div class="entry-name">Cycle of the Gods</div>
+        <ul class="changes">
+          <li>Texto da descrição encurtado <span class="neutral">(sem mudança de mecânica)</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sub-title">University</div>
+    <div class="entry">
+      <div class="icon">💡</div>
+      <div class="entry-body">
+        <div class="entry-name">Master Researcher <span class="arrow">→</span> Eureka!</div>
+        <ul class="changes">
+          <li>Mecânica totalmente nova: <span class="old">cliques sortudos davam progresso de pesquisa</span><span class="arrow">→</span><span class="new">a produção por segundo agora tem 8% de chance de virar um Lucky Hit</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sub-title">Barracks</div>
+    <div class="entry">
+      <div class="icon">🛡️</div>
+      <div class="entry-body">
+        <div class="entry-name">Immortal Legion</div>
+        <ul class="changes">
+          <li>Deixou de ser uma chance por luta: <span class="old">20% de chance de não perder tropas</span><span class="arrow">→</span><span class="new">garante 0 baixas após vencer um Trial ou uma invasão</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="category">
+    <div class="cat-title">🔨 Melhorias exclusivas</div>
+
+    <div class="entry">
+      <div class="icon">🪵</div>
+      <div class="entry-body">
+        <div class="entry-name">Lumbermill — Free Repair</div>
+        <ul class="changes">
+          <li>Agora é um único sorteio no fim da luta, valendo pra <span class="new">todos</span> os reparos dela (não mais por prédio)</li>
+          <li>Chance de todos saírem de graça: <span class="old">25%</span><span class="arrow">→</span><span class="new">20%</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="icon">⚔️</div>
+      <div class="entry-body">
+        <div class="entry-name">Barracks — Veteran Recruits</div>
+        <ul class="changes">
+          <li>Texto revisado <span class="neutral">(sem mudança de mecânica)</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="icon">🔒</div>
+      <div class="entry-body">
+        <div class="entry-name">Oaths desbloqueados por pesquisa</div>
+        <ul class="changes">
+          <li>Agora aparecem na lista <span class="new">bloqueados</span> assim que a University é construída, em vez de ficarem ocultos até serem encontrados — igual às melhorias exclusivas</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="category">
+    <div class="cat-title">⚔️ Batalha</div>
+
+    <div class="entry">
+      <div class="icon">🤖</div>
+      <div class="entry-body">
+        <div class="entry-name">Auto, x2 e x4</div>
+        <ul class="changes">
+          <li><span class="new">Novo:</span> três botões no canto inferior esquerdo da luta — Auto (5 toques/s), x2 e x4 de velocidade</li>
+          <li>Auto e x2 pedem o pacote <span class="neutral">Deluxe</span>; x4 pede o <span class="neutral">Ultimate</span></li>
+          <li>Ligar x2 ou x4 ativa o Auto junto — e desligar o Auto desliga a velocidade também</li>
+          <li>Com Auto ligado, toda skill equipada é lançada sozinha assim que sai da recarga</li>
+          <li>Música e efeitos abaixam um pouco com x2/x4 ligado, pra não distorcer</li>
+        </ul>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="icon">🐙</div>
+      <div class="entry-body">
+        <div class="entry-name">Minigames de chefe</div>
+        <ul class="changes">
+          <li>x2/x4 agora pausa sozinho ao entrar em qualquer minigame, e volta a ligar depois — exceto na fase final, que decide a luta</li>
+        </ul>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="icon">🔭</div>
+      <div class="entry-body">
+        <div class="entry-name">Observatory — aviso de invasão</div>
+        <ul class="changes">
+          <li>Removido o botão <span class="old">"OK"</span> que nunca deveria aparecer; agora só Prepare, Fight e (quando disponível) Wait</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="category">
+    <div class="cat-title">🏰 Invasões</div>
+
+    <div class="entry">
+      <div class="icon">⏳</div>
+      <div class="entry-body">
+        <div class="entry-name">Tempo entre invasões</div>
+        <ul class="changes">
+          <li>Intervalo sorteado: <span class="old">8–15 min</span><span class="arrow">→</span><span class="new">8–12 min</span></li>
+          <li>Piso mínimo garantido: <span class="old">8 min</span><span class="arrow">→</span><span class="new">7 min</span> para quem tem o oath Conquest</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="category">
+    <div class="cat-title">🎛️ Interface e outros</div>
+
+    <div class="entry">
+      <div class="icon">🍀</div>
+      <div class="entry-body">
+        <ul class="changes">
+          <li>Os textos da University agora chamam o golpe de sorte de <span class="neutral">"Lucky Hit"</span>, em vez de "special find"</li>
+          <li>Removido o texto de ambientação das 3 melhorias principais da Wall</li>
+          <li>Avisos na tela (toasts) agora respeitam um intervalo mínimo entre repetições, pra não aparecerem em sequência</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer class="note">
+  Clicker Village 2 · Big House Games — achou essa página? é segredo. 🤫
+</footer>
+
+</body>
+</html>
